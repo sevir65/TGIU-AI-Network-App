@@ -9,6 +9,8 @@ if ! git diff --quiet || ! git diff --cached --quiet; then
   git commit -m "Auto-backup LYRA: $NOW"
   git push origin main
   echo "Backup LYRA salvat la $NOW"
+  termux-tts-speak "Backup LYRA salvat cu succes"
 else
   echo "Nicio modificare de salvat."
+  termux-tts-speak "Nicio modificare de salvat"
 fi
